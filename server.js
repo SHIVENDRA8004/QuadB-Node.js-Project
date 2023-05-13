@@ -1,13 +1,17 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const connectDatabase = require("./config/connectDb.js");
+
 const app = express();
+const PORT = process.env.PORT || 5500;
 dotenv.config();
+
 connectDatabase();
 
 app.get("/", (req, res) => {
     res.send("Middleware working");
 });
-app.listen(5500, () => {
-    console.log("Listening on Port 5500");
+
+app.listen(PORT, () => {
+    console.log(`Server Started Listening on Port No. ${PORT}`);
 });
