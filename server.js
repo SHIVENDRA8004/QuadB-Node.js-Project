@@ -11,7 +11,6 @@ dotenv.config();
 app.use(cors());
 connectDatabase();
 fetchAndSortTickers();
-
 app.get("/", (req, res) => {
     res.send("Middleware working");
 });
