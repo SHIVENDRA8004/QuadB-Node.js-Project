@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const tickersSchema = new Schema(
+const tickerSchema = new Schema(
     {
         storeName: {
             type: String,
@@ -32,6 +32,6 @@ const tickersSchema = new Schema(
         timestamps: true,
     }
 );
-const tickersModel = mongoose.model("tickers", tickersSchema);
+const tickerModel = mongoose.model("Ticker", tickerSchema);
 
-module.exports = tickersModel;
+module.exports = tickerModel;
