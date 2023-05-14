@@ -1,5 +1,6 @@
 const tickerModel = require("../models/tickers.model");
 
+// Controller that returns all the tickers stored in database
 const getAlltickers = async (req, res) => {
     try {
         const tickers = await tickerModel.find({});
@@ -13,6 +14,8 @@ const getAlltickers = async (req, res) => {
         console.log("Error: ", error);
     }
 };
+
+// Controller that saves top10 sorted tickers to database
 const saveTickers = async (topTenSortedTickers) => {
     try {
         await tickerModel.deleteMany();
