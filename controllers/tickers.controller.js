@@ -20,7 +20,7 @@ const saveTickers = async (sortedTickers) => {
             const Ticker = new tickerModel({ storeName, last, buy, sell, volume, baseUnit });
             await Ticker.save();
         }
-        console.log("Sorted tickers saved to database.");
+        console.log("All tickers saved to database.");
     } catch (error) {
         console.log("Error: ", error);
     }

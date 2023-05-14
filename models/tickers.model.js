@@ -24,7 +24,7 @@ const tickerSchema = new Schema(
             required: [true, "Volume is Required"],
         },
         baseUnit: {
-            type: Number,
+            type: String,
             required: [true, "Base Unit is Required"],
         },
     },
