@@ -2,7 +2,6 @@ const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const connectDatabase = require("./config/connectDb.js");
-const fetchAndSortTickers = require("./controllers/fetchAndSortTickers.js");
 const morgan = require("morgan");
 const mainRoute = require("./routes/main.router.js");
 
