@@ -1,5 +1,5 @@
 const express = require("express");
-const getAlltickers = require("../controllers/getAllTickers");
+const { getAlltickers } = require("../controllers/tickers.controller");
 const tickersRoute = express.Router();
 
 tickersRoute.get("/getAllTicker", getAlltickers);

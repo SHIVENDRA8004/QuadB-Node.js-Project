@@ -1,3 +1,5 @@
+const { saveTickers } = require("./tickers.controller");
+
 const fetch = (...args) => import("node-fetch").then(({ default: fetch }) => fetch(...args));
 const fetchAndSortTickers = async () => {
     const response = await fetch("https://api.wazirx.com/api/v2/tickers");
@@ -12,6 +14,6 @@ const fetchAndSortTickers = async () => {
     }));
     sortedTickers = tickers.sort((tickerA, tickerB) => tickerB.volume - tickerA.volume);
     topTenTickers = sortedTickers.slice(0, 10);
-    return topTenTickers;
+    saveTickers(topTenTickers);
 };
 module.exports = fetchAndSortTickers;
