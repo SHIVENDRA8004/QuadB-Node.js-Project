@@ -13,7 +13,9 @@ dotenv.config();
 app.use(cors());
 app.use(morgan("tiny"));
 app.use(express.json());
-fetchAndSortTickers();
+
+// Fetching new tickers after each 10 mins and the deleting previous tickers and saving new tickers in database
+setInterval(() => fetchAndSortTickers(), 10 * 60 * 1000);
 
 app.get("/", (req, res) => {
     res.redirect("/api/v1");

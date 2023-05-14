@@ -13,14 +13,12 @@ const getAlltickers = async (req, res) => {
         console.log("Error: ", error);
     }
 };
-const saveTickers = async (sortedTickers) => {
+const saveTickers = async (topTenSortedTickers) => {
     try {
-        for (const ticker of sortedTickers) {
-            const { storeName, last, buy, sell, volume, baseUnit } = ticker;
-            const Ticker = new tickerModel({ storeName, last, buy, sell, volume, baseUnit });
-            await Ticker.save();
-        }
-        console.log("All tickers saved to database.");
+        await tickerModel.deleteMany();
+        console.log("All Previously Present Tickers Deleted from Database");
+        await tickerModel.insertMany(topTenSortedTickers);
+        console.log("All new tickers saved to database.");
     } catch (error) {
         console.log("Error: ", error);
     }
