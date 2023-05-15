@@ -1,25 +1,37 @@
 const Table = () => {
     return (
         <div>
-            {/* <table className="table table-secondary table-striped table-content">
-                <thead>
-                    <td class="table-secondary">#</td>
-                    <td class="table-secondary">Platform</td>
-                    <td class="table-success">Last Traded Price</td>
-                    <td class="table-danger">Buy / Sell Price</td>
-                    <td class="table-warning">Difference</td>
-                    <td class="table-info">Savings</td>
+            <table class="table text-light">
+                <thead className="text-secondary">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Platform</th>
+                        <th scope="col">Last Traded Price</th>
+                        <th scope="col">Buy / Sell Price</th>
+                        <th scope="col">Difference</th>
+                        <th scope="col">Savings</th>
+                    </tr>
                 </thead>
-                <tr>
-                    <td class="table-primary">...</td>
-                    <td class="table-secondary">...</td>
-                    <td class="table-success">...</td>
-                    <td class="table-danger">...</td>
-                    <td class="table-warning">...</td>
-                    <td class="table-info">...</td>
-                </tr>
-            </table> */}
-            <h1>Table</h1>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     );
 };
