@@ -1,18 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 const Table = () => {
-    // const [tickers, setTickers] = useState([]);
+    const [tickers, setTickers] = useState([]);
 
-    // const fetchData = async () => {
-    //     try {
-    //         const response = await axios.get();
-    //         setTickers(response.data);
-    //         console.log(tickers);
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // };
-    // fetchData();
+    const fetchData = async () => {
+        try {
+            const response = await axios.get("http://localhost:5500/api/v1/tickers/getAllTicker");
+            await setTickers(response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    };
+    useEffect(() => {
+        fetchData();
+    }, []);
+
     return (
         <div className="container-fluid">
             <div className="row">
@@ -28,14 +30,18 @@ const Table = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                        </tr>
+                        {tickers?.map((ticker, i) => (
+                            <tr>
+                                <th>{i + 1}</th>
+                                <td>{ticker.storeName}</td>
+                                <td>&#8377; {Math.ceil(ticker.last * ticker.volume)}</td>
+                                <td>
+                                    &#8377; {Math.ceil(ticker.buy * ticker.volume)} / &#8377;{Math.ceil(ticker.sell * ticker.volume)}
+                                </td>
+                                <td>&#8377; {Math.ceil(ticker.buy * ticker.last * ticker.volume)}</td>
+                                <td>&#8377; {Math.ceil(ticker.buy * ticker.last * ticker.volume)}</td>
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
             </div>

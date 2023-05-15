@@ -11,8 +11,8 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-.components {
-    height: 100vh;
+.App {
+    height: 110vh;
 }
 .text-sky {
     color: #6ccacb;
@@ -111,4 +111,7 @@ input:checked + .slider:before {
 .addHomeBtn:hover {
     color: #fff;
     background-color: #6ccacb;
+}
+.bg {
+    background-color: #191d28;
 }
