@@ -3,7 +3,7 @@ const tickerModel = require("../models/tickers.model");
 // Controller that returns all the tickers stored in database
 const getAlltickers = async (req, res) => {
     try {
-        const tickers = await tickerModel.find({});
+        const tickers = await tickerModel.find();
         if (tickers.length === 0) {
             res.json("There are no tickers in database");
         } else {
