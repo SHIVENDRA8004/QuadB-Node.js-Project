@@ -1,15 +1,15 @@
 const Table = () => {
     return (
         <div>
-            <table class="table text-light">
+            <table className="table text-light text-center mt-4">
                 <thead className="text-secondary">
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Platform</th>
-                        <th scope="col">Last Traded Price</th>
-                        <th scope="col">Buy / Sell Price</th>
-                        <th scope="col">Difference</th>
-                        <th scope="col">Savings</th>
+                        <th>#</th>
+                        <th>Platform</th>
+                        <th>Last Traded Price</th>
+                        <th>Buy / Sell Price</th>
+                        <th>Difference</th>
+                        <th>Savings</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -18,17 +18,8 @@ const Table = () => {
                         <td>Mark</td>
                         <td>Otto</td>
                         <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
                     </tr>
                 </tbody>
             </table>
