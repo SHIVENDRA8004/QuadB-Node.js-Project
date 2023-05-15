@@ -6,7 +6,7 @@ const Header = () => {
                 <div className="col-12 col-sm-4 text-center text-sm-start ps-sm-5">
                     <img height="48" width="280" src={logo} alt="Logo" />
                 </div>
-                <div className="col-12 col-sm-4 d-flex justify-content-center h-50">
+                <div className="col-12 col-sm-4 d-flex justify-content-center h-50 mt-sm-0 mt-2">
                     <div className="dropdown">
                         <button className="dropdown-toggle select-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             INR
@@ -39,14 +39,14 @@ const Header = () => {
                         <button className=" select-btn">BUY BTC</button>
                     </div>
                 </div>
-                <div className="col-12 col-sm-4 d-flex justify-content-center h-50">
-                    <div>
+                <div className="col-12 col-sm-4 d-flex justify-content-center align-items-center mt-sm-0 mt-3 h-50">
+                    <div className="me-3">
                         <div className="hours-container">
                             <div className="hours" />
                             <div className="hours-label">60</div>
                         </div>
                     </div>
-                    <div>
+                    <div className="me-3">
                         <button
                             className="d-flex align-items-center ps-3 pe-3 border-0"
                             style={{ borderRadius: "12px", backgroundColor: "#6ccacb", color: "#fff" }}
@@ -55,9 +55,10 @@ const Header = () => {
                         </button>
                     </div>
                     <div>
-                        <div className="form-check form-switch">
-                            <input className="form-check-input bg-transparent" type="checkbox" role="switch" id="flexSwitchCheckChecked" defaultChecked />
-                        </div>
+                        <label className="switch">
+                            <input type="checkbox" defaultChecked />
+                            <span className="slider round" />
+                        </label>
                     </div>
                 </div>
             </div>
