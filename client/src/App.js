@@ -6,9 +6,11 @@ import Table from "./components/Table";
 function App() {
     return (
         <div className="App">
-            <Header />
-            <SubHeader />
-            <Table />
+            <div className="components">
+                <Header />
+                <SubHeader />
+                <Table />
+            </div>
             <Footer />
         </div>
     );

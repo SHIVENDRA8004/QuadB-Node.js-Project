@@ -1,17 +1,18 @@
 body {
     margin: 0;
     font-family: "Oswald", sans-serif;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    background-color: #191d28;
+    color: white;
 }
 body::-webkit-scrollbar {
     display: none;
 }
 
-.App {
+.components {
     height: 100vh;
-    background-color: #191d28;
-    color: white;
 }
 .text-sky {
     color: #6ccacb;
@@ -98,7 +99,16 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
-
-table {
-    width: vw;
+.addHomeBtn {
+    border: 1px solid #6ccacb;
+    background-color: transparent;
+    font-weight: 300;
+    color: #6ccacb;
+    height: 36px;
+    width: 240px;
+    border-radius: 5px;
+}
+.addHomeBtn:hover {
+    color: #fff;
+    background-color: #6ccacb;
 }
