@@ -5,7 +5,7 @@ const Table = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get("http://localhost:5500/api/v1/tickers/getAllTicker");
+            const response = await axios.get("/api/v1/tickers/getAllTicker");
             await setTickers(response.data);
         } catch (error) {
             console.log(error);
@@ -14,7 +14,6 @@ const Table = () => {
     useEffect(() => {
         fetchData();
     }, []);
-
     return (
         <div className="container-fluid">
             <div className="row">
